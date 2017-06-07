@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 6, 2017 11:32:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="websiteBuilder.Users" table="users" catalog="websitebuilder" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="username" type="string">
+            <column name="username" length="25" />
+        </property>
+        <property name="pword" type="string">
+            <column name="pword" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

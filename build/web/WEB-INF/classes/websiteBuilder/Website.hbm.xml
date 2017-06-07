@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Jun 6, 2017 11:32:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="websiteBuilder.Website" table="website" catalog="websitebuilder" optimistic-lock="version">
+        <id name="userId" type="int">
+            <column name="user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="url" type="string">
+            <column name="url" length="100" />
+        </property>
+        <property name="published" type="java.lang.Boolean">
+            <column name="published" />
+        </property>
+        <property name="websiteName" type="string">
+            <column name="website_name" length="25" />
+        </property>
+    </class>
+</hibernate-mapping>

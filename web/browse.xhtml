@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./template.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:define name="top">
+        top
+    </ui:define>
+
+    <ui:define name="body">
+        <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="Title:"/>
+                    <h:outputText value="#{userController.selected.username}" title="Username"/>
+                    <h:outputText value="Description"/>
+                    <h:outputText value="#{userController.selected.userId}" title="Description"/>
+                    <h:outputText value="Genre"/>
+                    <h:outputText value="#{userController.usernames}"/>
+ 
+                    <h:outputText value="Cast"/>
+                    <h:outputText value="#{userController.websites}"/>
+ 
+                </h:panelGrid>
+
+                <h:commandLink action="#{userController.prepareList}" value="View All List"/>
+                <br/>
+            </h:form>
+    </ui:define>
+
+</ui:composition>
